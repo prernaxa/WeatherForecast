@@ -20,5 +20,5 @@ A simple and responsive weather dashboard built with **React.js** and **Tailwind
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/weatherforecastapp.git
+   git clone https://github.com/prernaxa/weatherforecastapp.git
    cd weatherforecastapp
