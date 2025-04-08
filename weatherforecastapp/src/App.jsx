@@ -63,7 +63,7 @@ const App = () => {
           🌤 Weather Dashboard
         </h1>
 
-        {/* Search */}
+        {/* Search + Refresh */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <input
             type="text"
@@ -79,6 +79,15 @@ const App = () => {
           >
             Search
           </button>
+          <button
+            onClick={() => getWeather(city)}
+            disabled={!weather}
+            className={`px-6 py-2 rounded-xl font-semibold shadow transition ${
+              weather ? 'bg-purple-500 hover:bg-purple-600 text-black' : 'bg-gray-300 text-gray-600 cursor-not-allowed'
+            }`}
+          >
+            Refresh 🔄
+          </button>
         </div>
 
         {/* History */}
@@ -91,9 +100,7 @@ const App = () => {
                   setCity(c);
                   getWeather(c);
                 }}
-                
                 className="text-sm px-4 py-2 rounded-full bg-blue-100 text-black font-medium shadow hover:bg-blue-200 transition"
-
               >
                 {c}
               </button>
